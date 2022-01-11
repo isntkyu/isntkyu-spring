@@ -2,15 +2,17 @@ package isntkyu.isntkyuspring.service;
 
 import isntkyu.isntkyuspring.domain.Member;
 import isntkyu.isntkyuspring.repository.MemberRepository;
-import isntkyu.isntkyuspring.repository.MemoryMemberRepository;
-import org.springframework.expression.spel.ast.OpInc;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
     public final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService (MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
