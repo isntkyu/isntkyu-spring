@@ -2,10 +2,12 @@ package isntkyu.isntkyuspring.service;
 
 import isntkyu.isntkyuspring.domain.Member;
 import isntkyu.isntkyuspring.repository.MemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService {
     public final MemberRepository memberRepository;
 
